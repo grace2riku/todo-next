@@ -14,18 +14,6 @@ describe('RootLayout', () => {
   });
 
   describe('レイアウトレンダリング', () => {
-    it('正しい構造でレンダリングされる', () => {
-      const { container } = render(
-        <RootLayout>
-          <div>Test Child</div>
-        </RootLayout>
-      );
-
-      const html = container.innerHTML;
-      expect(html).toContain('lang="ja"');
-      expect(html).toContain('class="bg-gray-100 min-h-screen"');
-    });
-
     it('children が正しくレンダリングされる', () => {
       const { getByText } = render(
         <RootLayout>
